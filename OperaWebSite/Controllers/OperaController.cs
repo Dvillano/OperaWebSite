@@ -55,5 +55,78 @@ namespace OperaWebSite.Controllers
 
             return View("Create", opera);
         }
+
+        //GET
+        // Opera/Detail/id
+        public ActionResult Detail(int id)
+        {
+            Opera opera = context.Operas.Find(id);
+
+            if (opera != null)
+            {
+                return View("Detail", opera);
+            }
+            else
+                return HttpNotFound();
+
+
+        }
+
+        //GET /Opera/Delete/id
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            Opera opera = context.Operas.Find(id);
+
+            if (opera != null)
+            {
+                return View("Delete", opera);
+            }
+            else
+                return HttpNotFound();
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Opera opera = context.Operas.Find(id);
+
+            context.Operas.Remove(opera);
+            context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        //GET /Opera/Edit/id
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Opera opera = context.Operas.Find(id);
+
+            if (opera != null)
+            {
+                return View("Edit", opera);
+            }
+            else
+                return HttpNotFound();
+        }
+
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult EditConfirmed(Opera opera)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Entry(opera).State = EntityState.Modified;
+                context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+            return View("Edit", opera);
+        }
+
+
     }
 }

@@ -13,7 +13,7 @@ namespace OperaWebSite.Models
 
     public class Opera
     {
-
+        [Key]
         public int OperaId { get; set; }
 
         [Required(ErrorMessage ="Is required")]

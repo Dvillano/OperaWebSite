@@ -123,6 +123,9 @@
     </None>
     <Content Include="Views\Opera\Index.cshtml" />
     <Content Include="Views\Opera\Create.cshtml" />
+    <Content Include="Views\Opera\Detail.cshtml" />
+    <Content Include="Views\Opera\Delete.cshtml" />
+    <Content Include="Views\Opera\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
