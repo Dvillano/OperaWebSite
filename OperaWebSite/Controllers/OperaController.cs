@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Diagnostics;
 using OperaWebSite.Controllers;
 using OperaWebSite.Data;
 using System.Data.Entity;
 using OperaWebSite.Models;
 
+using OperaWebSite.Filters;
+
 namespace OperaWebSite.Controllers
 {
+    [MyFilterAction]
+
     public class OperaController : Controller
     {
         //Crear instancia del dbcontext
@@ -128,5 +132,8 @@ namespace OperaWebSite.Controllers
         }
 
 
+        //TODO Search by year
+
+        
     }
 }
