@@ -1,0 +1,186 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+
+* {
+    box-sizing: border-box;
+}
+
+/*Formulario de Login sacado de https://codepen.io/banunn/pen/AFnal */
+
+.log-form {
+    justify-content: center;
+    width: 50%;
+    background: #E2AD65;
+}
+
+form {
+    display: block;
+    width: 100%;
+    padding: 2em;
+}
+
+form h2 {
+    width: 100%;
+    color: #E2AD65;
+    font-family: 'open sans condensed';
+    font-size: 1.35em;
+    display: block;
+    background: #E2AD65;
+    width: 100%;
+    text-transform: uppercase;
+    padding: .75em 1em .75em 1.5em;
+    border: 1px solid #2a2a2a;
+    margin: 0;
+    font-weight: 200;
+}
+
+.btn {
+    display: inline-block;
+    background: #210403;
+    padding: .5em 2em;
+    color: #C5ABA8;
+    margin-right: .5em;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #89605B;
+    cursor: pointer;
+}
+
+/*Formulario de Login sacado de https://codepen.io/banunn/pen/AFnal */
+
+body {
+    margin: 0;
+    font-family: 'open sans', helvetica, arial, sans;
+
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#banner {
+    flex: 60%;
+    height: 200px;
+}
+
+#banner img {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 2px;
+}
+
+#login {
+    flex: 40%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #E2AD65;
+}
+
+
+#menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #210403;
+}
+
+li a {
+    color: #C5ABA8;
+    display: block;
+    text-decoration: none;
+    padding: .5em 1em;
+}
+
+li a:hover {
+    background: #89605B;
+    color: black;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FFEED5;
+}
+
+#izq {
+    width: 300px;
+    padding: 10px;
+    align-self: center;
+}
+
+#content {
+    flex-grow: 2;
+    text-align: center;
+   
+}
+
+#content a {
+    color: #C5ABA8;
+}
+
+
+#der {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul li a {
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: #E2AD65;
+    padding: 2px;
+}
+
+td {
+    border: 1px solid #eee;
+    padding: 2px;
+    color: #777;
+}
+
+tr:hover {
+    background: #EAEBEC;
+    transition: all 0.5s ease 0s;
+}
+
+#footer {
+    background-color: #E2AD65;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+}
+#footer p {
+    text-align: end;
+}
+
+h1, h2, h3, p{
+    text-align:center;
+}
+
+

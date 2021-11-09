@@ -14,6 +14,7 @@ namespace OperaWebSite.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            ViewBag.Fecha = DateTime.Now.ToString();
             return View();
         }
 

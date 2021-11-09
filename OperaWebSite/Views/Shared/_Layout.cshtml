@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="header">
+        <div id="banner">
+            <img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/teatro_colon_interior_nicolas1500x610.jpg" alt="banner-teatro" />
+        </div>
+
+        <div id="login">
+            <div class="log-form">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" title="username" placeholder="usuario" />
+                    <input type="password" title="username" placeholder="contraseña" />
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Opera</a></li>
+            <li><a href="#">Empleado</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div id="izq">
+            @if (IsSectionDefined("izq"))
+            {
+                @RenderSection("izq")
+            }
+            else
+            {
+                <h3>Direccion: </h3>
+                <p><i>Cerrito 628, CAB</i>A</p>
+                <h3>Telefono: </h3>
+                <p><i>011 4378-7100</i></p>
+
+            }
+        </div>
+
+        <div id="content">
+            @RenderBody()
+        </div>
+
+        <div id="der">
+            @if (IsSectionDefined("der"))
+            {
+                @RenderSection("der")
+            }
+            else
+            {
+                <ul>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Buenos_Aires_Teatro_Colon_2.jpg" alt="teatrocolon1-externo" /></li>
+                    <li><img src="http://teatrocolon.org.ar/sites/default/files/styles/d8/public/2019-10/teatro-colon_exterior_001.jpg?itok=H4-VExa7" alt="teatrocolon2-externo" /></li>
+                    <li><img src="https://turismo.buenosaires.gob.ar/sites/turismo/files/teatro_colon_panoramica_1200_1.jpg" alt="teatrocolon3-externo" /></li>
+                </ul>
+            }
+        </div>
+    </div>
+    
+
+    <div id="footer">
+        <p>#Footer</p>
+    </div>
+</body>
+</html>

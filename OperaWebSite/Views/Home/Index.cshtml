@@ -6,11 +6,27 @@
     <title>Index</title>
 </head>
 <body>
-    <div> 
-        <h1>Bienvenido al sistema Web del Teatro Milan</h1>
-        <p>
+
+    <h1>Bienvenido al sistema Web del Teatro Milan</h1>
+    <h3>@ViewBag.Fecha</h3>
+    @section izq
+        {
+        <p>El Teatro Colón inició sus actividades en 1857 en un edificio ubicado en la Plaza de Mayo, donde funcionó hasta 1888. El teatro se mudó entonces al edificio actual ubicado frente a la Plaza Vaticano, que tardó 20 años en ser construido hasta su inauguración en 1908.</p>
+        <br />
+        <p>En su historia se destaca la creación de los cuerpos artísticos como la Orquesta, el Coro y el Ballet en la década de 1920, ante la imposibilidad de contar siempre con elencos extranjeros completos. En 1931 se realiza la municipalización que, hasta entrada la Segunda Guerra Mundial, logró una de las etapas más estables y fructíferas del teatro.</p>
+    }
+
+    @section der
+    {
+        <ul>
+            <li><img src="https://arteyaires.files.wordpress.com/2013/12/16_15_b_baez_artnoveauteatrocolon.jpg" alt="teatrocolon1" /></li>
+            <li><img src="https://images.clarin.com/2021/06/29/la-monumental-arana-del-teatro___SRJKUb8M2_720x0__1.jpg" alt="teatrocolon2" /></li>
+            <li><img src="https://www.buenosaires.gob.ar/sites/gcaba/files/field/image/teatro_colon_1.jpg" alt="teatrocolon3" /></li>
+        </ul>
+    }
+        
+        <p class="btn">
             @Html.ActionLink("Ir a operas", "Index", "Opera")
         </p>
-    </div>
-</body>
+    </body>
 </html>

@@ -8,7 +8,26 @@
 </head>
 <body>
 
-    <p>@Html.ActionLink("CreateNew","Create","Opera")</p>
+    @section izq
+    {
+       <h2>Operas de Mozart</h2>
+            <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Ascanio_in_Alba">Ascanio en Alba</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Il_sogno_di_Scipione">El sueño de Escipión</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Le_nozze_di_Figaro">Las bodas de Fígaro</a></li>
+            </ul>
+    }
+
+    @section der
+    {
+        <ul>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Mozart-small.jpg" alt="Mozart" /></li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg" alt="Beethoven" /></li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Vivaldi.jpg/1200px-Vivaldi.jpg" alt="Vivaldi" /></li>
+        </ul>
+    }
+
+    <p class="btn">@Html.ActionLink("CreateNew", "Create", "Opera")</p>
     <table>
         <tr>
             <th>@Html.DisplayNameFor(model => model.Title) </th>
@@ -21,20 +40,20 @@
 
         @foreach (var item in Model)
         {
-    <tr>
-        <td>@Html.DisplayFor(modelItem => item.Title) </td>
-        <td>@Html.DisplayFor(modelItem => item.Composer)</td>
-        <td>@Html.DisplayFor(modelItem => item.Year)</td>
-        <td>
-            @Html.ActionLink("Detail", "Detail", new { id = item.OperaId })
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.OperaId })
-        </td>
-        <td>
-            @Html.ActionLink("Delete", "Delete", new { id = item.OperaId })
-        </td>
-    </tr>
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Title) </td>
+                <td>@Html.DisplayFor(modelItem => item.Composer)</td>
+                <td>@Html.DisplayFor(modelItem => item.Year)</td>
+                <td>
+                    @Html.ActionLink("Detail", "Detail", new { id = item.OperaId })
+                </td>
+                <td> 
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OperaId })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OperaId })
+                </td>
+            </tr>
         }
     </table>
 </body>
